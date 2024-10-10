@@ -7,6 +7,7 @@ const rename = require('gulp-rename');
 const lineec = require('gulp-line-ending-corrector');
 const filter = require('gulp-filter');
 const log = require('fancy-log');
+const htmlbeautify = require('gulp-html-beautify');
 
 // Dynamic import for chalk
 async function loadChalk() {
@@ -18,7 +19,7 @@ gulp.task('styles', async function(done) {
   const chalk = await loadChalk(); // Load chalk dynamically
   log(chalk.green('Compiling SCSS...'));
 
-  gulp.src('css/sufiyans-awesome-page.scss') // Update with your SCSS source path
+  gulp.src('css/sufiyans-awesome-page.scss') // SCSS source path
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
@@ -26,9 +27,19 @@ gulp.task('styles', async function(done) {
     .pipe(rename({ suffix: '.min' }))
     .pipe(sourcemaps.write('.'))
     .pipe(lineec())
-    .pipe(gulp.dest('css')); // Update with your destination path
+    .pipe(gulp.dest('css')); // destination path
 
   done();
 });
 
 gulp.task('default', gulp.series('styles'));
+
+gulp.task('beautify-html', function() {
+	const options = {
+	  indentSize: 4,
+	  unformatted: ['pre', 'code']
+	}
+	return gulp.src('*.html') // Source path
+	  .pipe(htmlbeautify(options))
+	  .pipe(gulp.dest('.')); // Output path
+});
