@@ -6,6 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sufiyan's Awesome Page</title>
     <link rel="stylesheet" href="css/sufiyans-awesome-page.min.css?ver=1.0.0">
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function() {
+			var overlay = document.querySelector('.video-overlay');
+			if (overlay) {
+				overlay.addEventListener('click', function () {
+					this.style.display = 'none'; // Hide overlay
+					var iframe = document.querySelector('.video iframe');
+					var videoSrc = iframe.src;
+					iframe.src = videoSrc + "?autoplay=1"; // Autoplay video
+				});
+			}
+		});
+	</script>
 </head>
 
 <body class="sufiyans-awesome-page">
@@ -32,9 +45,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/mUGYPlAgJPw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
+				<div class="video-container">
+					<div class="video-overlay">
+						<img src="img/form-pages.svg" alt="Featured" class="overlay-image">
+						<div class="play-button">
+							<img src="img/play-button.svg" alt="Play Button">
+						</div>
+					</div>
+					<div class="video">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/mUGYPlAgJPw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div>
+				
             </div>
         </header>
 
