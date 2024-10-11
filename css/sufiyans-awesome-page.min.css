@@ -130,6 +130,14 @@ body {
 	background-color: #F8F8F8;
 }
 
+.header-section .header-container {
+	max-width: 635px;
+}
+
+.header-section .col-sm-no-padding {
+	padding: 0;
+}
+
 .header-section .video {
 	flex-shrink: 0;
 	border-radius: 6px;
@@ -165,13 +173,13 @@ body {
 
 .header-section .logo #title .title {
 	display: inline-flex;
-	margin-right: 10px;
+	margin-right: 2px;
 	color: var(--primary-text, #444);
 	font-family: Arvo, sans-serif;
 	font-size: 48px;
 	font-style: normal;
 	font-weight: 400;
-	line-height: normal;
+	line-height: 59.27px;
 }
 
 .header-section .logo #title .pro-badge {
@@ -179,14 +187,7 @@ body {
 	padding: 5px 10px;
 	flex-direction: column;
 	align-items: center;
-	border-radius: 11px;
-	background: #BBB;
-	color: #FFF;
-	font-family: Helvetica Neue, sans-serif;
-	font-size: 10px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
+	margin-top: 30px;
 	float: right;
 }
 
@@ -201,10 +202,10 @@ body {
 /* Feature Section */
 
 .features-section {
-	display: inline-flex;
+	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	margin-top: 200px;
+	margin-top: 250px;
 	margin-bottom: 100px;
 }
 
@@ -227,9 +228,10 @@ body {
 .features-section .row .feature .title {
 	color: var(--primary-text, #444);
 	text-align: center;
-	font-size: 22px;
+	font-size: 24px;
 	font-weight: 700;
 	line-height: 30px;
+	margin: 6px auto;
 }
 
 .features-section .row .feature .description {
@@ -237,6 +239,7 @@ body {
 	text-align: center;
 	font-size: 16px;
 	line-height: 24px;
+	margin: 8px auto;
 }
 
 .features-section .row .feature .icon {
@@ -281,6 +284,7 @@ body {
 
 .testimonials-section .row .testimonial .quote {
 	color: var(--Secondary-Text, #777);
+	margin: 0;
 	margin-bottom: 10px;
 }
 
@@ -291,6 +295,7 @@ body {
 	color: var(--hint-text, #AAA);
 	font-size: 14px;
 	float: left;
+	margin: 0;
 }
 
 .testimonials-section .row .testimonial .rating {
@@ -606,6 +611,7 @@ body {
 
 .testimonials-section .row .testimonial .rating {
 	float: right;
+	margin-top: 4px;
 }
 
 }
@@ -613,7 +619,7 @@ body {
 @media (min-width: 1400px) {
 
 .container {
-	max-width: 1320px;
+	max-width: 960px;
 }
 
 .header-section .video {
@@ -627,7 +633,7 @@ body {
 }
 
 .features-section {
-	margin-bottom: 100px;
+	margin-top: 240px;
 }
 
 .hero-section .screenshot-description .screenshot {
