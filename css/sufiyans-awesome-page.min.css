@@ -150,6 +150,7 @@ body {
 	top: 70px;
 	width: 384px;
 	height: 216px;
+	overflow: hidden;
 }
 
 .header-section .video-container iframe {
@@ -169,6 +170,7 @@ body {
 	align-items: center;
 	cursor: pointer;
 	z-index: 10;
+	border-radius: inherit;
 }
 
 .header-section .video-container .video-overlay .overlay-image {
@@ -180,8 +182,7 @@ body {
 	-o-object-fit: cover;
 	object-fit: cover;
 	z-index: -1;
-	border: 2px solid #fff;
-	border-radius: 6px;
+	border-radius: inherit;
 }
 
 .header-section .video-container .video-overlay .play-button img {
