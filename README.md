@@ -1,5 +1,6 @@
 # Sufiyans Awesome Psage
 A simple landing page that follows the design provided. Uses modern markup and styling techniques/methods, fully responsive.
+**This Page was tested on Iphone 14 Pro Max for mobile View**
 
 ## Screen Shots
 
