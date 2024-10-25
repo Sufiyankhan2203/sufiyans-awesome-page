@@ -2,7 +2,8 @@
 A simple landing page that follows the design provided. Uses modern markup and styling techniques/methods, fully responsive.
 **This Page was tested on Iphone 14 Pro Max for mobile View**
 
-## Screen Shots
+## Screen Shot
+![CleanShot 2024-10-25 at 23 13 26@2x](https://github.com/user-attachments/assets/34a27386-2ba7-4d25-99ea-b542c7230149)
 
 
 ## Built With
